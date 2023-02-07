@@ -1,16 +1,17 @@
-const x = 5;
-const y = 8;
-console.log(y);
-console.log(x);
-x + y;
-console.log(x + y)
+// const x = 5;
+// const y = 8;
+// console.log(y);
+// console.log(x);
+
 // function calculateEngravingPrice(message, pricePerWord) {
+//     // Change code below this line
+//     message = [5, 1, 6];
+//     pricePerWord = 10;
 
-//     calculateEngravingPrice = message.length * pricePerWord;
+//    const calculateEngravingPrice = message.length * pricePerWord;
 //     return calculateEngravingPrice;
-
-// }
-// console.log(calculateEngravingPrice)
-
-
-
+    
+//     // Change code above this line
+//     }
+//     console.log(calculateEngravingPrice);
+ 
