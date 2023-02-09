@@ -1,6 +1,3 @@
-// const x = 5;
-// const y = 8;
-// console.log(y);
 // console.log(x);
 
 // function calculateEngravingPrice(message, pricePerWord) {
@@ -12,6 +9,11 @@
 //     return calculateEngravingPrice;
     
 //     // Change code above this line
-//     }
-//     console.log(calculateEngravingPrice);
- 
+//  
+//     console.log(calculateEngravingPrice); 
+
+    // calculateTotal(1)
+    // calculateTotal(3)
+    // calculateTotal(7)
+    // calculateTotal(18)
+    // calculateTotal(24)
