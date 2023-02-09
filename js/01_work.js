@@ -1,4 +1,7 @@
-// console.log(x);
+const x = 5;
+const y = 8;
+console.log(y);
+console.log(x);
 
 // function calculateEngravingPrice(message, pricePerWord) {
 //     // Change code below this line
