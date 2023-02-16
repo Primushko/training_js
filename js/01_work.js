@@ -1,23 +1,29 @@
-// const x = 5;
-// const y = 8;
-// console.log(y);
-// console.log(x);
 
-// function calculateEngravingPrice(message, pricePerWord) {
-//     // Change code below this line
-//     message = [5, 1, 6];
-//     pricePerWord = 10;
-
-//    const calculateEngravingPrice = message.length * pricePerWord;
-//     return calculateEngravingPrice;
+// console.log(`hello`)
+const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+    ];
     
-//     // Change code above this line
-//  
-//     console.log(calculateEngravingPrice); 
+    function getAllPropValues(propName) {
+    // Change code below this line
+    const category = [];
+    for (const product of products) {
+    if (product === propName) {
+        category.push(propName.product);
+        console.log(products);
+    }
+    // return category;
+    }
+    
+    
+    
+    
+    // Change code above this line
+    }
+    
 
-    // calculateTotal(1)
-    // calculateTotal(3)
-    // calculateTotal(7)
-    // calculateTotal(18)
-    // calculateTotal(24)
-console.log(`hello`)
+
+    
