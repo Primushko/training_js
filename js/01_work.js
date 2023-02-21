@@ -112,3 +112,13 @@ function makePizza() {
     const result = makePizza();
     const pointer = (makePizza);
     console.log(makePizza(result));
+
+    function calculateTotalPrice(orderedItems) {
+        let totalPrice = 0;
+        // Change code below this line
+        
+        
+        
+        // Change code above this line
+        return totalPrice;
+        }
