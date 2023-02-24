@@ -6,16 +6,16 @@
 
 // поиск самой маленькой температури
 
-    // const temps = [18, 25, 12, 28, 3, 17];
+// const temps = [18, 25, 12, 28, 3, 17];
 
-    // console.log(Math.max(...temps));
-    // console.log(Math.min(...temps));
+// console.log(Math.max(...temps));
+// console.log(Math.min(...temps));
 
-    // const a = [1, 2, 3];
-    // const b = [...a];
+// const a = [1, 2, 3];
+// const b = [...a];
 
-    // console.log(a);
-    // console.log(b);
+// console.log(a);
+// console.log(b);
 
 // РАСПІЛЕНИЕ ... обьектов -Object.prolotype.assing() i spread
 // const a = { x: 1, y: 2 };
@@ -42,7 +42,6 @@
 // };
 // console.log(finalSettings);
 
-
 // КОЛБЕК-ФУНКЦІЇ
 
 // function greet(name) {
@@ -67,58 +66,55 @@
 // передали посилання на функцію greet як аргумент
 // registerGuest("Манго", greet);
 
-
 //                  ІНЛАЙН КОЛБЕКИ
-    // function registerGuest(name, callback) {
-    //     console.log(`Реєструємо гостя ${name}.`);
-    //     callback(name);
-    //     }
-        
+// function registerGuest(name, callback) {
+//     console.log(`Реєструємо гостя ${name}.`);
+//     callback(name);
+//     }
+
 // Передаємо інлайн функцію greet у якості колбека
-    // registerGuest("Манго", function greet(name) {
-    // console.log(`Ласкаво просимо ${name}.`);
-    // });
+// registerGuest("Манго", function greet(name) {
+// console.log(`Ласкаво просимо ${name}.`);
+// });
 // Передаємо інлайн функцію notify у якості колбека
-    // registerGuest("Полі", function notify(name) {
-    // console.log(`Шановний(а) ${name}, ваш номер буде готовий за 30 хвилин.`);
-    // });
-    //                 АБСТРАКЦІЯ
-    // function printValue(value) {
-    //     console.log(value);
-    // }
-    // function prettyPrint(value) {
-    //     console.log("Logging value: ", value);
-    // }
-    // function repeat(n, action) {
-    //     for (let i = 0; i < n; i += 1) {
-    //     action(i);
-    //     }
-    // }  
-// // Передаємо printValue як callback-функцію      
+// registerGuest("Полі", function notify(name) {
+// console.log(`Шановний(а) ${name}, ваш номер буде готовий за 30 хвилин.`);
+// });
+//                 АБСТРАКЦІЯ
+// function printValue(value) {
+//     console.log(value);
+// }
+// function prettyPrint(value) {
+//     console.log("Logging value: ", value);
+// }
+// function repeat(n, action) {
+//     for (let i = 0; i < n; i += 1) {
+//     action(i);
+//     }
+// }
+// // Передаємо printValue як callback-функцію
 //     repeat(3, printValue);
 // 0
 // 1
 // 2
- // Передаємо prettyPrint як callback-функцію
-    // repeat(3, prettyPrint);
+// Передаємо prettyPrint як callback-функцію
+// repeat(3, prettyPrint);
 // Logging value: 0
 // Logging value: 1
-// Logging value: 2   
+// Logging value: 2
 function makePizza() {
     return "Your pizza is being prepared, please wait.";
-    }
-  // Change code below this line
-    
-    const result = makePizza();
-    const pointer = (makePizza);
-    console.log(makePizza(result));
+}
+// Change code below this line
 
-    function calculateTotalPrice(orderedItems) {
-        let totalPrice = 0;
-        // Change code below this line
-        
-        
-        
-        // Change code above this line
-        return totalPrice;
-        }
+const result = makePizza();
+const pointer = makePizza;
+console.log(makePizza(result));
+
+function calculateTotalPrice(orderedItems) {
+    let totalPrice = 0;
+  // Change code below this line
+
+  // Change code above this line
+    return totalPrice;
+}
