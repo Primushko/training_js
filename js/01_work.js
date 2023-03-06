@@ -67,7 +67,7 @@
 // this в callback-функціях
 // ------------------------
 // Передаючи методи об'єкта як колбек-функції, контекст не зберігається.
-// Колбек - це посилання на метод, яке присвоюється 
+// Колбек - це посилання на метод, яке присвоюється
 // як значення параметра, що викликається без об'єкта.
 
 // const customer = {
@@ -78,7 +78,7 @@
 //   },
 // };
 
-// function makeMessage(callback) {  
+// function makeMessage(callback) {
 //   console.log(`Обробляємо заявку від ${callback()}.`);
 // }
 // callback() - це виклик методу getFullName без об'єкта
@@ -86,3 +86,17 @@
 
 // makeMessage(customer.getFullName);
 // Буде помилка у виклику функції
+console.log(document);
+
+const body = document.body;
+console.log(body);
+
+const list = body.firstElementChild;
+console.log(list);
+
+const firstListItem = list.firstElementChild;
+console.log(firstListItem);
+
+const listItems = list.children;
+console.log(listItems);
+
