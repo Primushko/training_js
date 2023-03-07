@@ -86,7 +86,7 @@
 
 // makeMessage(customer.getFullName);
 // Буде помилка у виклику функції
-console.log(document);
+// console.log(document);
 
 const body = document.body;
 console.log(body);
@@ -94,9 +94,14 @@ console.log(body);
 const list = body.firstElementChild;
 console.log(list);
 
-const firstListItem = list.firstElementChild;
-console.log(firstListItem);
+// const firstListItem = list.firstElementChild;
+// console.log(firstListItem);
 
-const listItems = list.children;
-console.log(listItems);
+// const listItems = list.children;
+// console.log(listItems);
 
+// const navItemEl = document.querySelector(`.Document`);
+// console.log(navItemEl);
+
+// const navItemEl = document.querySelectorAll(`.document_link`);
+// console.log(navItemEl);
