@@ -389,87 +389,88 @@
 // };
       // Кожна транзакція то є об'єкт з властивостями: 
       // id, type, amount, transactionStatus
-const account = {
-  // поточний баланс
-    _balance: 0,
-  // Поточний id транзакції
-    _curID: 0,
-  // Історія транзакцій
-    _transactions: [],
-  // Метод створює і повертає об'єкт транзакції
-  // Приймає суму, тип і статус транзакциї
-    createTransaction(type, amount, transactionStatus) {
-    const transaction = {   
-    id: this._curID++,
-    type,
-    amount,
-    transactionStatus,
-    };
-    return transaction;
-    },
-  // Метод для додавання суми на баланс.
-  // Приймає суму транцакції.
-  // Викликає createTransaction для створення об'єкта транзакції
-  // опісля додає його до історії транзакцій
-    deposit(amount) {
-    const transaction = this.createTransaction(
-    Transaction.DEPOSIT,
-    amount,
-    "success"
-    );
-    this._transactions.push(transaction);
-    this._balance += amount;
-    },
-  // Метод для зняття суми з балансу.
-  // Приймає суму транцакції.
-  // Викликає createTransaction для створення об'єкта транзакції
-  // опісля додає його до історії транзакцій
-  // Якщо amount більше за потчний баланс, виводим сповіщення про,
-  // недостатню кількість коштів на рахунку
-    withdraw(amount) {
-    if (this._balance < amount) {
-    const transaction = this.createTransaction(
-        Transaction.WITHDRAW,
-        amount,
-        "error"
-    );
-    this._transactions.push(transaction);
-    console.log("Not enough funds in the account");
-    } else {
-    const transaction = this.createTransaction(
-        Transaction.WITHDRAW,
-        amount,
-        "success"
-    );
-    this._transactions.push(transaction);
-    this._balance -= amount;
-    } 
-    },
-  // Метод повертає текущий баланс
-    getBalance() {
-    return this._balance; // code here
-    },
-  // Метод шукає і повертає об'єкт транзакції за id
-    getTransactionDetails(id) {
-    const transaction = this._transactions.find(
-    (transaction) => transaction.id === id
-    );
-    return transaction ? transaction : "Transaction not found";
-    },
-  // Метод повертає кількість коштів визначеного типу
-  // транзакції з всієї історії транзакцій
-    getTransactionType(type) {
-    const transactions = this._transactions.filter(
-    (transaction) => transaction.type === type
-    );
-    const totalAmount = transactions.reduce(
-    (total, transaction) => total + transaction.amount,
-    0
-    );
-    return totalAmount; 
-    },
-};
+// const account = {
+//   // поточний баланс
+//     _balance: 0,
+//   // Поточний id транзакції
+//     _curID: 0,
+//   // Історія транзакцій
+//     _transactions: [],
+//   // Метод створює і повертає об'єкт транзакції
+//   // Приймає суму, тип і статус транзакциї
+//     createTransaction(type, amount, transactionStatus) {
+//     const transaction = {   
+//     id: this._curID++,
+//     type,
+//     amount,
+//     transactionStatus,
+//     };
+//     return transaction;
+//     },
+//   // Метод для додавання суми на баланс.
+//   // Приймає суму транцакції.
+//   // Викликає createTransaction для створення об'єкта транзакції
+//   // опісля додає його до історії транзакцій
+//     deposit(amount) {
+//     const transaction = this.createTransaction(
+//     Transaction.DEPOSIT,
+//     amount,
+//     "success"
+//     );
+//     this._transactions.push(transaction);
+//     this._balance += amount;
+//     },
+//   // Метод для зняття суми з балансу.
+//   // Приймає суму транцакції.
+//   // Викликає createTransaction для створення об'єкта транзакції
+//   // опісля додає його до історії транзакцій
+//   // Якщо amount більше за потчний баланс, виводим сповіщення про,
+//   // недостатню кількість коштів на рахунку
+//     withdraw(amount) {
+//     if (this._balance < amount) {
+//     const transaction = this.createTransaction(
+//         Transaction.WITHDRAW,
+//         amount,
+//         "error"
+//     );
+//     this._transactions.push(transaction);
+//     console.log("Not enough funds in the account");
+//     } else {
+//     const transaction = this.createTransaction(
+//         Transaction.WITHDRAW,
+//         amount,
+//         "success"
+//     );
+//     this._transactions.push(transaction);
+//     this._balance -= amount;
+//     } 
+//     },
+//   // Метод повертає текущий баланс
+//     getBalance() {
+//     return this._balance; // code here
+//     },
+//   // Метод шукає і повертає об'єкт транзакції за id
+//     getTransactionDetails(id) {
+//     const transaction = this._transactions.find(
+//     (transaction) => transaction.id === id
+//     );
+//     return transaction ? transaction : "Transaction not found";
+//     },
+//   // Метод повертає кількість коштів визначеного типу
+//   // транзакції з всієї історії транзакцій
+//     getTransactionType(type) {
+//     const transactions = this._transactions.filter(
+//     (transaction) => transaction.type === type
+//     );
+//     const totalAmount = transactions.reduce(
+//     (total, transaction) => total + transaction.amount,
+//     0
+//     );
+//     return totalAmount; 
+//     },
+// };
 
+// M3-4 Приклад 8.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
