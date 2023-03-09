@@ -249,10 +249,226 @@
       // "BEST the is JS"
 // ________________________________________________________________________________________
 
+// M3-4 Приклад 1.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Напиши скрипт, який для об'єкта user,
+// послідовно:
+// 1 додасть поле mood зі значенням 'happy'
+// 2 замінить hobby на 'skydiving'
+// 3 замінить значення premium на false
+// 4 виводить вміст об'єкта users у форматі
+// "ключ: значення" - використовуючи Object.keys () і for ... of
 
+// const user = {
+//     name: "John",
+//     age: 20,
+//     hobby: "tenis",
+//     premium: true,
+// };
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+// for (const key of Object.keys(user)) {
+//     console.log(`${key}: ${user[key]}`);
+// }
 
+// M3-4 Приклад 2.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// У нас є об'єкт, у якому зберігатимуться зарплати
+// нашої команди
+// Напишіть код для сумування всіх зарплат і
+// Збережіть його результат у змінній total.
+// Якщо об'єкт salaries порожній, результат має бути 0
+// const salaries = {
+//     Mango: 100,
+//     Poly: 160,
+//     Ajax: 1470,
+// };
+// let total = 0;
+// for (const key in salaries) {
+//     total += salaries[key];
+// }
+// console.log(total);
 
+// M3-4 Приклад 3.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Напишіть ф-цію calcTotalCost(stones, stonesName),
+// яка приймає масив об'єктів і
+// Рядок з назвою каменю.
+// Функція вважає, що м повертає загальну вартість каменів
+// з таким ім'ям, ціною та кількістю з об'єкта
+// const stones = [
+//     { name: "Смарагд", cost: 1300, quantity: 4 },
+//     { name: "Діамант", cost: 2700, quantity: 6 },
+//     { name: "Сапфір", cost: 400, quantity: 7 },
+//     { name: "Щебінь", cost: 150, quantity: 100 },
+// ];
+// const calcTotalCost = (stones, stonesName) => {
+//     let totalCost = 0;
+//     for (const stone of stones) {
+//     if (stone.name === stonesName) {
+//       totalCost = stone.cost * stone.quantity;
+//     break;
+//     }
+//     }
+//     return totalCost;
+// };
+// console.log(calcTotalCost(stones, "Діамант"));
 
+// M3-4 Приклад 4.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Створіть об'єкт calculator із трьома методами
+// read(a, b) - приймає два аргументи та зберігає їх
+// як властивості об'єкта
+// sum() повертає суму збережених значень
+// mult() перемножує збережені значення та повертає результат
+// const calculator = {
+//     read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//     return this;
+//     },
+//     sum() {
+//     return this.a + this.b;
+//     },
+//     mult() {
+//     return this.a * this.b;
+//     },
+// };
+// console.log(calculator.read(2, 3).sum().mult());
+
+// M3-4 Приклад 5.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Напишіть функцію updateObject, яка приймає об'єкт та повертає
+// новий об'єкт без зазначеного параметра
+// Очікуваний результат ({a: 1, b: 2}, 'b') => {a: 1}
+// const updateObject = (obj, removeKey) => {
+           // Створити новий об'єкт, щоб не змінювати вхідний об'єкт
+    // const newObj = { ...obj };
+           // Видалити ключ
+    // delete newObj[removeKey];
+           // Повернути новий об'єкт
+//     return newObj;
+// };
+
+//5.1 Напишіть функцію updateObject, яка приймає об'єкт та повертає
+//новий об'єкт без зазначених параметрів
+//Очікуваний результат ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
+// const updateObject2 = (obj, ...removeKeys) => {
+//     const newObj = { ...obj };
+//     removeKeys.forEach(key => delete newObj[key]);
+//     return newObj;
+// };
+// const res = updateObject2({ a: 1, b: 2, c: 3 }, `b`, `a`);
+// console.log(res);
+
+// M3-4 Приклад 6.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Напишіть функцію, яка приймає як параметр об'єкт
+// і формує властивості об'єкта
+// у новому масиві у форматі [key, value]
+// [["name","John"],["surName","Stones"],...]
+// const user = {
+//     name: "John",
+//     surName: "Stones",
+//     age: 20,
+//     hobby: "tenis",
+//     haveCar: true,
+//     merried: false,
+//     };function changeObject(obj) {
+//     return Object.entries(obj);
+// }
+// const result = changeObject(user);
+// console.log(result);
+// [["name","John"],["surName","Stones"],...]
+
+// M3-4 Приклад 7.++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Написати скрипт керування особистим кабінетом інтернет банка
+// Є об'ект account в якому треба реалізувати
+// методи для работы з балансом і історією транзакцій
+// Типів транзакцій лише два.
+// Можна положить або зняти гроші на/з рахунку
+
+// const Transaction = {
+//     DEPOSIT: "deposit",
+//     WITHDRAW: "withdraw",
+// };
+      // Кожна транзакція то є об'єкт з властивостями: 
+      // id, type, amount, transactionStatus
+const account = {
+  // поточний баланс
+    _balance: 0,
+  // Поточний id транзакції
+    _curID: 0,
+  // Історія транзакцій
+    _transactions: [],
+  // Метод створює і повертає об'єкт транзакції
+  // Приймає суму, тип і статус транзакциї
+    createTransaction(type, amount, transactionStatus) {
+    const transaction = {   
+    id: this._curID++,
+    type,
+    amount,
+    transactionStatus,
+    };
+    return transaction;
+    },
+  // Метод для додавання суми на баланс.
+  // Приймає суму транцакції.
+  // Викликає createTransaction для створення об'єкта транзакції
+  // опісля додає його до історії транзакцій
+    deposit(amount) {
+    const transaction = this.createTransaction(
+    Transaction.DEPOSIT,
+    amount,
+    "success"
+    );
+    this._transactions.push(transaction);
+    this._balance += amount;
+    },
+  // Метод для зняття суми з балансу.
+  // Приймає суму транцакції.
+  // Викликає createTransaction для створення об'єкта транзакції
+  // опісля додає його до історії транзакцій
+  // Якщо amount більше за потчний баланс, виводим сповіщення про,
+  // недостатню кількість коштів на рахунку
+    withdraw(amount) {
+    if (this._balance < amount) {
+    const transaction = this.createTransaction(
+        Transaction.WITHDRAW,
+        amount,
+        "error"
+    );
+    this._transactions.push(transaction);
+    console.log("Not enough funds in the account");
+    } else {
+    const transaction = this.createTransaction(
+        Transaction.WITHDRAW,
+        amount,
+        "success"
+    );
+    this._transactions.push(transaction);
+    this._balance -= amount;
+    } 
+    },
+  // Метод повертає текущий баланс
+    getBalance() {
+    return this._balance; // code here
+    },
+  // Метод шукає і повертає об'єкт транзакції за id
+    getTransactionDetails(id) {
+    const transaction = this._transactions.find(
+    (transaction) => transaction.id === id
+    );
+    return transaction ? transaction : "Transaction not found";
+    },
+  // Метод повертає кількість коштів визначеного типу
+  // транзакції з всієї історії транзакцій
+    getTransactionType(type) {
+    const transactions = this._transactions.filter(
+    (transaction) => transaction.type === type
+    );
+    const totalAmount = transactions.reduce(
+    (total, transaction) => total + transaction.amount,
+    0
+    );
+    return totalAmount; 
+    },
+};
 
 
 
